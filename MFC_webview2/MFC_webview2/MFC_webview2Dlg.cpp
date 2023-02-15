@@ -233,14 +233,6 @@ HRESULT CMFC_webview2Dlg::OnCreateCoreWebView2ControllerCompleted(HRESULT result
 	return S_OK;
 }
 
-HRESULT CMFC_webview2Dlg::OnDevToolsProtocolMethod(HRESULT errorCode, LPCWSTR returnObjectAsJson)
-{
-	//get all cookie
-	//{"cookies":[{"domain":"www.jiben.tech","expires":-1,"httpOnly":false,"name":"name","path":"/","priority":"Medium","sameParty":false,"sameSite":"Lax","secure":false,"session":true,"size":7,"sourcePort":80,"sourceScheme":"NonSecure","value":"val"}]}
-	
-	return S_OK;
-}
-
 
 void CMFC_webview2Dlg::OnSysCommand(UINT nID, LPARAM lParam)
 {
