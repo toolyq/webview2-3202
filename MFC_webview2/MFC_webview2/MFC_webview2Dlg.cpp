@@ -221,14 +221,14 @@ HRESULT CMFC_webview2Dlg::OnCreateCoreWebView2ControllerCompleted(HRESULT result
 		return S_OK;
 	}).Get(), &newWindowRequestedtoken);
 
-	//m_webView->Navigate(url);//**************************************************
+	//m_webView->Navigate(url);// fix the issue ...**************************************************
 
 	if (m_onWebViewFirstInitialized)
 	{
 		m_onWebViewFirstInitialized();
 		m_onWebViewFirstInitialized = nullptr;
 	}
-	m_webView->Navigate(url);// reporduce the issue
+	m_webView->Navigate(url);// uncomment to reproduce the issue
 
 	return S_OK;
 }
