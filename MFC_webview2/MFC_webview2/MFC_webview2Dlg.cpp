@@ -182,7 +182,7 @@ HRESULT CMFC_webview2Dlg::OnCreateCoreWebView2ControllerCompleted(HRESULT result
 		args->get_Uri(&url);
 
 		CMFC_webview2Dlg* dlg = new CMFC_webview2Dlg(this);
-		dlg->url = url;
+		dlg->url = url; ///// should not set url for new open windows ............
 		CComPtr<ICoreWebView2Deferral> deferral;
 		args->GetDeferral(&deferral);
 
